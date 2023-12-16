@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.anoop.helper-function-tools": {
+      "version": "https://github.com/Anoop114/HelperPackages.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "079b13b98ede2bba9bfb2a704b7352d84280de14"
+    },
     "com.unity.editorcoroutines": {
       "version": "1.0.0",
       "depth": 1,
