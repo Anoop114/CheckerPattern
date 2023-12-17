@@ -15,6 +15,8 @@ namespace ImageSaveLoad
             }
             var textureBytes = textureImage.texture.EncodeToPNG();
             File.WriteAllBytes(Application.persistentDataPath + fileName, textureBytes);
+            
+            //## call to image downloader that 1 image is download success full.
             ImageDownloadAction.OnImageDownloadComplete?.Invoke();
         }
         

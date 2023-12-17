@@ -63,7 +63,10 @@ namespace ImageDownloader
         private IEnumerator LoadImageCall()
         {
             yield return new WaitUntil(()=> _isImageDownloadComplete && CheckerPatternUtils.IsloadPopup);
+            
+            // not needed to wait for 2 sec just for feel the ui good.
             yield return new WaitForSeconds(2f);
+            
             LoadImageToCheckerPattern.OnLoadImageCall?.Invoke(_serverData);
         }
     }
