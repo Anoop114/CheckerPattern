@@ -1,8 +1,7 @@
 using System;
 using System.IO;
+using ImageDownloader;
 using UnityEngine;
-using UnityEngine.UI;
-using Utils;
 
 namespace ImageSaveLoad
 {
@@ -16,7 +15,7 @@ namespace ImageSaveLoad
             }
             var textureBytes = textureImage.texture.EncodeToPNG();
             File.WriteAllBytes(Application.persistentDataPath + fileName, textureBytes);
-            FileNameRecord.saveFileName.Add(fileName);
+            ImageDownloadAction.OnImageDownloadComplete?.Invoke();
         }
         
         public static void LoadImageFromDisk(string fileName,Action<Texture2D> texture)

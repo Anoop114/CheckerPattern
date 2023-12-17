@@ -11,7 +11,8 @@ namespace Server
         {
             public string url;
             public int width;
-            public int height; 
+            public int height;
+            public string fileName;
         }
     }
 

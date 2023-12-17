@@ -30,7 +30,7 @@ namespace ImageDownloader
             }
         }
 
-        static void SaveImage(Texture2D loadedTexture,string fileName,Vector2 widthHeight)
+        private static void SaveImage(Texture2D loadedTexture,string fileName,Vector2 widthHeight)
         {
             var sprite = Sprite.Create(loadedTexture, new Rect(0f, 0f, widthHeight.x, widthHeight.y), Vector2.zero);
 
